@@ -48,23 +48,5 @@ python app.py
 ```
 Access the application at `http://127.0.0.1:5000/`
 
-## 🔥 Usage Guide
-1. Open the web application.
-2. Add your skincare products with details like name, frequency, and purpose.
-3. Log usage daily and provide feedback.
-4. View progress in the **Progress Tracking** section.
 
-## 💡 Contributing
-Feel free to fork this repository and contribute by submitting a pull request.
-1. Fork the repository.
-2. Create a new branch (`git checkout -b feature-branch`).
-3. Commit changes (`git commit -m "Added new feature"`).
-4. Push to your branch (`git push origin feature-branch`).
-5. Open a Pull Request on GitHub.
-
-## 📜 License
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## 📞 Contact
-For any issues, please raise a GitHub issue or reach out via email at `your-email@example.com`.
 
