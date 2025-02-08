@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skincare Tracker</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body class="container mt-4">
+
+    <h2 class="text-center">Skincare Routine Tracker</h2>
+
+    <!-- Add Product Form -->
+    <form action="/add_product" method="post" class="mb-4">
+        <h4>Add Skincare Product</h4>
+        <div class="mb-2">
+            <label>Product Name:</label>
+            <input type="text" name="name" required class="form-control">
+        </div>
+        <div class="mb-2">
+            <label>Usage Frequency:</label>
+            <input type="text" name="frequency" required class="form-control">
+        </div>
+        <div class="mb-2">
+            <label>Purpose:</label>
+            <input type="text" name="purpose" class="form-control">
+        </div>
+        <button type="submit" class="btn btn-primary">Add Product</button>
+    </form>
+
+    <!-- Log Usage Form -->
+    <form action="/log_usage" method="post" class="mb-4">
+        <h4>Log Product Usage</h4>
+        <div class="mb-2">
+            <label>Select Product:</label>
+            <select name="product_id" required class="form-control">
+                {% for product in products %}
+                    <option value="{{ product[0] }}">{{ product[1] }}</option>
+                {% endfor %}
+            </select>
+        </div>
+        <div class="mb-2">
+            <label>Feedback (optional):</label>
+            <input type="text" name="feedback" class="form-control">
+        </div>
+        <button type="submit" class="btn btn-success">Log Usage</button>
+    </form>
+
+    <a href="/progress" class="btn btn-info">View Progress</a>
+
+</body>
+</html>
